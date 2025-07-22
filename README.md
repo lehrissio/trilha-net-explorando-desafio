@@ -1,21 +1,130 @@
-# DIO - Trilha .NET - Explorando a linguagem C#
-www.dio.me
+# 🏨 Sistema de Hospedagem Hoteleira
 
-## Desafio de projeto
-Para este desafio, você precisará usar seus conhecimentos adquiridos no módulo de explorando a linguagem C#, da trilha .NET da DIO.
+Um sistema completo para gerenciamento de reservas hoteleiras desenvolvido em C# como parte da Trilha .NET da DIO.
 
-## Contexto
-Você foi contratado para construir um sistema de hospedagem, que será usado para realizar uma reserva em um hotel. Você precisará usar a classe Pessoa, que representa o hóspede, a classe Suíte, e a classe Reserva, que fará um relacionamento entre ambos.
+## 📋 Sobre o Projeto
 
-O seu programa deverá cálcular corretamente os valores dos métodos da classe Reserva, que precisará trazer a quantidade de hóspedes e o valor da diária, concedendo um desconto de 10% para caso a reserva seja para um período maior que 10 dias.
+Este projeto implementa um sistema de hospedagem que permite realizar reservas em um hotel, calculando valores automaticamente e aplicando descontos conforme as regras de negócio estabelecidas.
 
-## Regras e validações
-1. Não deve ser possível realizar uma reserva de uma suíte com capacidade menor do que a quantidade de hóspedes. Exemplo: Se é uma suíte capaz de hospedar 2 pessoas, então ao passar 3 hóspedes deverá retornar uma exception.
-2. O método ObterQuantidadeHospedes da classe Reserva deverá retornar a quantidade total de hóspedes, enquanto que o método CalcularValorDiaria deverá retornar o valor da diária (Dias reservados x valor da diária).
-3. Caso seja feita uma reserva igual ou maior que 10 dias, deverá ser concedido um desconto de 10% no valor da diária.
+## 🛠️ Tecnologias Utilizadas
 
+- **C# 12**
+- **.NET 9.0**
+- **Console Application**
+- **Programação Orientada a Objetos (POO)**
+
+## 🎯 Funcionalidades
+
+### ✅ Sistema de Reservas
+- Cadastro de hóspedes com validação
+- Criação de suítes com capacidade definida
+- Reservas com cálculo automático de valores
+- Interface de menu interativa
+
+### ✅ Regras de Negócio
+- **Validação de Capacidade**: Impede reservas que excedam a capacidade da suíte
+- **Cálculo Automático**: Valor total = Dias × Valor da diária
+- **Desconto Progressivo**: 10% de desconto para reservas ≥ 10 dias
+- **Tratamento de Exceções**: Validação de entradas
+
+## 🏗️ Arquitetura do Sistema
+
+```
+📦 DesafioProjetoHospedagem
+ ┣ 📂 Models
+ ┃ ┣ 📄 Pessoa.cs      # Classe representando hóspedes
+ ┃ ┣ 📄 Suite.cs       # Classe representando suítes do hotel
+ ┃ ┗ 📄 Reserva.cs     # Classe para gerenciar reservas
+ ┗ 📄 Program.cs       # Interface do usuário e menu principal
+```
+
+### 🔧 Classes Principais
 
 ![Diagrama de classe estacionamento](diagrama_classe_hotel.png)
 
-## Solução
-O código está pela metade, e você deverá dar continuidade obedecendo as regras descritas acima, para que no final, tenhamos um programa funcional. Procure pela palavra comentada "TODO" no código, em seguida, implemente conforme as regras acima.
+## 🚀 Como Executar
+
+### Pré-requisitos
+- [.NET 9.0 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
+
+### Execução
+1. Clone o repositório:
+```bash
+git clone https://github.com/seu-usuario/sistema-hospedagem.git
+cd sistema-hospedagem
+```
+
+2. Execute o projeto:
+```bash
+dotnet run
+```
+
+## 💻 Como Usar
+
+### Menu Principal
+```
+═══════════════════════════════════════
+     SISTEMA DE HOSPEDAGEM HOTELEIRA    
+═══════════════════════════════════════
+
+1 - Criar Reserva
+0 - Sair
+
+Escolha uma opção:
+```
+
+### Criando uma Reserva
+1. Informe a quantidade de hóspedes
+2. Digite o nome de cada hóspede
+3. Informe a quantidade de dias
+4. O sistema calculará automaticamente o valor total
+
+### Exemplo de Uso
+```
+Quantos hóspedes? 2
+Nome do hóspede 1: João
+Sobrenome do hóspede 1: Silva
+Nome do hóspede 2: Maria
+Sobrenome do hóspede 2: Santos
+Quantos dias de hospedagem? 15
+
+═══ RESERVA CRIADA COM SUCESSO ═══
+Hóspedes: 2
+
+Lista de hóspedes:
+• João Silva
+• Maria Santos
+
+Dias: 15
+Valor total: R$ 405,00
+* Desconto de 10% aplicado!
+```
+
+## 📊 Regras de Negócio
+
+### 🔒 Validações Implementadas
+- **Capacidade da Suíte**: Máximo 2 hóspedes por padrão
+- **Nomes Obrigatórios**: Todos os hóspedes devem ter nome
+- **Dias Válidos**: Quantidade de dias deve ser > 0
+- **Entrada Numérica**: Validação de tipos de dados
+
+### 💰 Cálculo de Valores
+```
+Valor Base = Dias × Valor da Diária (R$ 30,00)
+Desconto = 10% (se dias ≥ 10)
+Valor Final = Valor Base - Desconto
+```
+
+## 👨‍💻 Desenvolvedor
+
+Desenvolvido como parte do desafio da **Trilha .NET** da [DIO](https://www.dio.me).
+
+---
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT.
+
+---
+
+⭐ **Gostou do projeto? Deixe uma estrela!** ⭐
