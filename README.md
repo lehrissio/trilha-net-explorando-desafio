@@ -17,7 +17,6 @@ Este projeto implementa um sistema de hospedagem que permite realizar reservas e
 
 ### ✅ Sistema de Reservas
 - Cadastro de hóspedes com validação
-- Criação de suítes com capacidade definida
 - Reservas com cálculo automático de valores
 - Interface de menu interativa
 
@@ -103,7 +102,6 @@ Valor total: R$ 405,00
 ## 📊 Regras de Negócio
 
 ### 🔒 Validações Implementadas
-- **Capacidade da Suíte**: Máximo 2 hóspedes por padrão
 - **Nomes Obrigatórios**: Todos os hóspedes devem ter nome
 - **Dias Válidos**: Quantidade de dias deve ser > 0
 - **Entrada Numérica**: Validação de tipos de dados
