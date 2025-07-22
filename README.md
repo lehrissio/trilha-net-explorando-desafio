@@ -45,13 +45,13 @@ Este projeto implementa um sistema de hospedagem que permite realizar reservas e
 ## 🚀 Como Executar
 
 ### Pré-requisitos
-- [.NET 9.0 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
+- [.NET 9.0 SDK](https://dotnet.microsoft.com/download/dotnet/9.0)
 
 ### Execução
 1. Clone o repositório:
 ```bash
-git clone https://github.com/seu-usuario/sistema-hospedagem.git
-cd sistema-hospedagem
+git clone https://github.com/lehrissio/trilha-net-explorando-desafio
+cd strilha-net-explorando-desafio
 ```
 
 2. Execute o projeto:
