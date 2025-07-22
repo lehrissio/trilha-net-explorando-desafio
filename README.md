@@ -51,7 +51,7 @@ Este projeto implementa um sistema de hospedagem que permite realizar reservas e
 1. Clone o repositório:
 ```bash
 git clone https://github.com/lehrissio/trilha-net-explorando-desafio
-cd strilha-net-explorando-desafio
+cd trilha-net-explorando-desafio
 ```
 
 2. Execute o projeto:
