@@ -21,10 +21,9 @@ Este projeto implementa um sistema de hospedagem que permite realizar reservas e
 - Interface de menu interativa
 
 ### ✅ Regras de Negócio
-- **Validação de Capacidade**: Impede reservas que excedam a capacidade da suíte
+- **Tratamento de Exceções**: Impede reservas que excedam a capacidade da suíte
 - **Cálculo Automático**: Valor total = Dias × Valor da diária
 - **Desconto Progressivo**: 10% de desconto para reservas ≥ 10 dias
-- **Tratamento de Exceções**: Validação de entradas
 
 ## 🏗️ Arquitetura do Sistema
 
@@ -97,20 +96,6 @@ Lista de hóspedes:
 Dias: 15
 Valor total: R$ 405,00
 * Desconto de 10% aplicado!
-```
-
-## 📊 Regras de Negócio
-
-### 🔒 Validações Implementadas
-- **Nomes Obrigatórios**: Todos os hóspedes devem ter nome
-- **Dias Válidos**: Quantidade de dias deve ser > 0
-- **Entrada Numérica**: Validação de tipos de dados
-
-### 💰 Cálculo de Valores
-```
-Valor Base = Dias × Valor da Diária (R$ 30,00)
-Desconto = 10% (se dias ≥ 10)
-Valor Final = Valor Base - Desconto
 ```
 
 ## 👨‍💻 Desenvolvedor
